@@ -9,8 +9,8 @@
 
 </details>
 
-## Lambda Handler for Probot
-A [Probot](https://github.com/probot/probot) extension to make it easier to run your Probot Apps in AWS Lambda.
+## GCF Handler for Probot
+A [Probot](https://github.com/probot/probot) extension to make it easier to run your Probot Apps in Google Cloud Functions.
 
 ## Usage
 
