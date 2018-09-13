@@ -1,15 +1,5 @@
 ## Google Cloud Function Handler for Probot
 
-
-
-<details>
-<summary>TODO: Not published yet. Coming soon.</summary>
-
-
-
-</details>
-
-## GCF Handler for Probot
 A [Probot](https://github.com/probot/probot) extension to make it easier to run your Probot Apps in Google Cloud Functions.
 
 ## Usage
