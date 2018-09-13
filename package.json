@@ -10,10 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/probot/serverless-gcf.git"
   },
-  "dependencies": {
-    "serverless": "^1.31.0",
-    "serverless-offline": "^3.25.11"
-  },
+  "dependencies": {},
   "devDependencies": {
     "standard": "^10.0.3"
   },
