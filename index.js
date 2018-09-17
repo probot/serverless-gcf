@@ -23,6 +23,15 @@ const loadProbot = (appFn) => {
 
 module.exports.serverless = appFn => {
   return async (request, response) => {
+    // 🤖 A friendly homepage if there isn't a payload
+    if (request.method === 'GET' && request.path === '/probot') {
+      return response.send({
+        statusCode: 200,
+        headers: { 'Content-Type': 'text/html' },
+        body: template
+      })
+    }
+
     // Otherwise let's listen handle the payload
     probot = probot || loadProbot(appFn)
 
