@@ -2,21 +2,28 @@ const { Application } = require('probot')
 const { resolve } = require('probot/lib/resolver')
 const { findPrivateKey } = require('probot/lib/private-key')
 const { template } = require('./views/probot')
+const cacheManager = require('cache-manager')
 
-let app, probot
+let app, probot, cache
 
-const loadProbot = (appFn) => {
+const loadProbot = (plugin) => {
+  cache = cache || cacheManager.caching({
+    store: 'memory',
+    ttl: 60 * 5 // 5 minutes
+  })
+
   app = app || new Application({
     id: process.env.APP_ID,
     secret: process.env.WEBHOOK_SECRET,
-    cert: findPrivateKey()
+    cert: findPrivateKey(),
+    cache
   })
 
-  if (typeof appFn === 'string') {
-    appFn = resolve(appFn)
+  if (typeof plugin === 'string') {
+    plugin = resolve(plugin)
   }
 
-  app.load(appFn)
+  app.load(plugin)
 
   return app
 }
