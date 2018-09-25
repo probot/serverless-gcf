@@ -1,12 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`serverless-gcf calls the event handler 1`] = `
-Object {
-  "body": "{\\"message\\":\\"Executed\\"}",
-  "statusCode": 200,
-}
-`;
-
 exports[`serverless-gcf responds with the homepage 1`] = `
 Object {
   "body": "

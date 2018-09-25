@@ -7,6 +7,7 @@ describe('serverless-gcf', () => {
     response = { send: jest.fn() }
     spy = jest.fn()
     handler = serverless(async app => {
+      app.auth = () => Promise.resolve({})
       app.on('issues', spy)
     })
   })
