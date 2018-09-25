@@ -4,7 +4,7 @@ describe('serverless-gcf', () => {
   let spy, handler, response
 
   beforeEach(() => {
-    response = { send: jest.fn() }
+    response = { send: jest.fn(), sendStatus: jest.fn() }
     spy = jest.fn()
     handler = serverless(async app => {
       app.auth = () => Promise.resolve({})
@@ -34,5 +34,21 @@ describe('serverless-gcf', () => {
     await handler(request, response)
     expect(response.send).toHaveBeenCalled()
     expect(spy).toHaveBeenCalled()
+  })
+
+  it('does nothing if there are missing headers', async () => {
+    const request = {
+      body: {
+        installation: { id: 1 }
+      },
+      get (string) {
+        return this[string]
+      }
+    }
+
+    await handler(request, response)
+    expect(response.send).not.toHaveBeenCalled()
+    expect(spy).not.toHaveBeenCalled()
+    expect(response.sendStatus).toHaveBeenCalledWith(400)
   })
 })
