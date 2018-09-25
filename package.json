@@ -4,7 +4,7 @@
   "description": "An extension for running Probot in Google Cloud Functions",
   "main": "index.js",
   "scripts": {
-    "test": "jest && standard"
+    "test": "jest --coverage && standard"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "npm": ">= 5.0.0"
   },
   "keywords": [
-    "lambda",
+    "google cloud functions",
     "probot",
     "github"
   ],
