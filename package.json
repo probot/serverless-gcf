@@ -10,12 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/probot/serverless-gcf.git"
   },
-  "dependencies": {},
   "devDependencies": {
+    "jest": "^23.6.0",
+    "probot": "^7.1.2",
     "standard": "^10.0.3"
   },
   "peerDependencies": {
-    "probot": "^7.0.0"
+    "probot": "^7.1.2"
   },
   "engines": {
     "node": ">= 8.10.0",
@@ -26,6 +27,17 @@
     "probot",
     "github"
   ],
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
+  },
   "author": "Jason Etcovitch <jasonetco@github.com>",
   "license": "ISC",
   "bugs": {
