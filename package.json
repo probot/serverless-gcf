@@ -1,6 +1,6 @@
 {
   "name": "@probot/serverless-gcf",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "An extension for running Probot in Google Cloud Functions",
   "main": "index.js",
   "scripts": {
