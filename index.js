@@ -43,15 +43,15 @@ module.exports.serverless = appFn => {
     probot = probot || loadProbot(appFn)
 
     // Determine incoming webhook event type
-    const event = request.get('x-github-event') || request.get('X-GitHub-Event')
+    const name = request.get('x-github-event') || request.get('X-GitHub-Event')
     const id = request.get('x-github-delivery') || request.get('X-GitHub-Delivery')
 
     // Do the thing
-    console.log(`Received event ${event}${request.body.action ? ('.' + request.body.action) : ''}`)
-    if (event) {
+    console.log(`Received event ${name}${request.body.action ? ('.' + request.body.action) : ''}`)
+    if (name) {
       try {
         await probot.receive({
-          event,
+          name,
           id,
           payload: request.body
         })
