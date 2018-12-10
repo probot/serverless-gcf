@@ -10,7 +10,7 @@ $ npm install @probot/serverless-gcf
 
 ```javascript
 // handler.js
-const serverless = require('@probot/serverless-gcf');
+const { serverless } = require('@probot/serverless-gcf');
 const appFn = require('./')
 module.exports.probot = serverless(appFn)
 ```
