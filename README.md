@@ -21,7 +21,7 @@ This package moves the functionality of `probot run` into a handler suitable for
 ## Differences from `probot run`
 
 #### Local Development
-Since GCF functions do not start a normal node process, the best way we've found to test this out locally is to use [`serverless-offline`](https://github.com/dherault/serverless-offline). This plugin for the serverless framework emulates AWS Lambda and API Gateway on your local machine, allowing you to continue working from `https://localhost:3000/probot` before deploying your function to AWS.
+Since GCF functions do not start a normal node process, the best way we've found to test this out locally is to use [`serverless-offline`](https://github.com/dherault/serverless-offline). This plugin for the serverless framework emulates AWS Lambda and API Gateway on your local machine, allowing you to continue working from `https://localhost:3000/probot` before deploying your function.
 
 #### Long running tasks
 Some Probot Apps that depend on long running processes or intervals will not work with this extension. This is due to the inherent architecture of serverless functions, which are designed to respond to events and stop running as quickly as possible. For longer running apps we recommend using [other deployment options](https://probot.github.io/docs/deployment).
