@@ -6,10 +6,7 @@
   "scripts": {
     "test": "jest --coverage && standard"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/probot/serverless-gcf.git"
-  },
+  "repository": "github:probot/serverless-gcf",
   "devDependencies": {
     "jest": "^23.6.0",
     "probot": "^7.1.2",
@@ -39,9 +36,5 @@
     ]
   },
   "author": "Jason Etcovitch <jasonetco@github.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/probot/serverless-gcf/issues"
-  },
-  "homepage": "https://github.com/probot/serverless-gcf#readme"
+  "license": "ISC"
 }
