@@ -8,6 +8,7 @@
   },
   "repository": "github:probot/serverless-gcf",
   "devDependencies": {
+    "@octokit/webhooks": "^5.0.2",
     "jest": "^23.6.0",
     "probot": "^7.1.2",
     "standard": "^10.0.3"
