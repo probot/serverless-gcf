@@ -36,5 +36,10 @@
     ]
   },
   "author": "Jason Etcovitch <jasonetco@github.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "renovate": {
+    "extends": [
+      "github>octokit/.github"
+    ]
+  }
 }
